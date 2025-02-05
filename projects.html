@@ -6,68 +6,149 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Projects</title>
 </head>
+<style>
+	
+	main {
+		display: flex;
+	    align-items: center;
+	    height: 100vh; 
+	    width: 100%;
+	    flex-direction: column;
+		margin-top: 60px;
+	}
+
+	.app-container {
+	    display: flex;
+	    flex-direction: row;
+	    gap: 20px;
+	}
+
+	.app-descr {
+		background-color: rgb(255, 255, 255, 0.25);
+    	border-radius: 20px;
+    	width: 100px;
+    	height: auto;
+    	flex-grow: 1;
+	}
+
+	.apps {
+		display: flex; 
+		flex-direction: column;
+		gap: 20px; 
+		width: 100%;
+	}
+
+	.title-container {
+		display: flex; 
+		flex-direction: column;
+		background-color: rgb(255, 255, 255, 0.25);
+    	border-radius: 20px;
+		height: 40px;
+		margin-bottom: 20px;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.title {
+		display: flex;
+		width: 100%;
+		height: 100%; 
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@media (min-width: 768px) {
+	  .apps {
+	    width: 50%;
+	  }
+
+	  .title-container {
+	  	width: 50%;
+	  }
+	}
+
+	.icon {
+	    width: 100px;
+	    height: 100px;
+	    border-radius: 16px;
+	}
+
+	.icon-container {
+		display: flex;
+		align-items: center;
+	}
+
+</style>
 <body>
-	<nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="aboutme.html">About me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="aboutme.html">About me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
-	<div style='margin-top: 100px;'>
-		<div style='display: flex; flex-direction: column; gap: 20px'>
-			<div class='container' style="width: 780px; height: 60px">
-				<div style='display: flex; height: 60px; align-items: center; justify-content: center;'>
-					My project list. Click on the icon to follow the GitHub link
-			    </div>
-			</div>
 
-			<div class='app-container'>
-				<a href='https://github.com/CubeSquareRomb/Equadratic'>
-					<img class='icon' src='assets/equadratic_icon.jpg'>
-				</a>
-				<div class='container' style="width: 600px; height: 160px">
-					<div style='margin: 10px'>
-			    		This game, called Equadratic and my pet project, is about solving quadratic equations at speed. Made using Kotlin. There are avaiable 3 languages: English, Ukrainian and Russian. Player can choose time (from 30s to 10m) and difficulty. The game contains a user-friendly tutorial, which made for non-matematician players. For each time and difficulty there is highscore, which save in SharedPreferences
-			    	</div>
-			    </div>
-			</div>
+  <main>
+    <div class="title-container">
+      <div class="title">
+        My project list. Click on the icon to follow the GitHub link
+      </div>
+    </div>
 
-			<div class='app-container'>
-				<a href='https://github.com/CubeSquareRomb/Equadratic-Flutter'>
-					<img class='icon' src='assets/equadratic_2_icon.jpg'>
-				</a>
-				<div class='container' style="width: 600px; height: 160px">
-					<div style='margin: 10px'>
-			    		Similar to previous one, but made using Flutter from scratch
-			    	</div>
-			    </div>
-			</div>
+    <!-- App list -->
+    <div class="apps">
+      <!-- Equadratic -->
+      <div class='app-container'>
+			<a class='icon-container' href='https://github.com/CubeSquareRomb/Equadratic'>
+				<img class='icon' src='assets/equadratic_icon.jpg'>
+			</a>
+			<div class='app-descr'>
+				<div style='margin: 10px'>
+		    		Equadratic: Game about solving quadratic equations for speed
+		    	</div>
+		    </div>
+	  </div>
 
-			<div class='app-container'>
-				<a href='https://github.com/CubeSquareRomb/random-colors'>
-					<img class='icon' src='assets/colors_icon.jpg'>
-				</a>
-				<div class='container' style="width: 600px; height: 160px">
-					<div style='margin: 10px'>
-			    		Simple random color generator, made on Flutter. There are 3 modes: full random, saturated colors, gray colors
-			    	</div>
-			    </div>
-			</div>
+	  <!-- Equadratic (Flutter) -->
+      <div class='app-container'>
+			<a class='icon-container' href='https://github.com/CubeSquareRomb/Equadratic-Flutter'>
+				<img class='icon' src='assets/equadratic_2_icon.jpg'>
+			</a>
+			<div class='app-descr'>
+				<div style='margin: 10px'>
+		    		Equadratic, but made using Flutter from scratch
+		    	</div>
+		    </div>
+	  </div>
 
-			<div class='app-container'>
-				<a href='https://github.com/CubeSquareRomb/notes'><img class='icon' src='assets/notes_icon.jpg'></a>
-				<div class='container' style="width: 600px; height: 160px">
-					<div style='margin: 10px'>
-			    		Simple note app, made on Flutter, which contains basic functions for notes: Adding, Deleting, Editing. I used SQFLite
-			    	</div>
-			    </div>
-			</div>
+	  <!-- Notes -->
+      <div class='app-container'>
+			<a class='icon-container' href='https://github.com/CubeSquareRomb/notes'>
+				<img class='icon' src='assets/notes_icon.jpg'>
+			</a>
+			<div class='app-descr'>
+				<div style='margin: 10px'>
+		    		Simple note app. Made using Flutter, uses SQFLite
+		    	</div>
+		    </div>
+	  </div>
 
-			<br>
-		</div>
-	</div>
+	  <!-- Random Color Generator -->
+      <div class='app-container'>
+			<a class='icon-container' href='https://github.com/CubeSquareRomb/random-colors'>
+				<img class='icon' src='assets/colors_icon.jpg'>
+			</a>
+			<div class='app-descr'>
+				<div style='margin: 10px'>
+		    		Random Color Generator (Flutter)
+		    	</div>
+		    </div>
+	  </div>
+    </div>
+  </main>
 </body>
 
 <script src="script.js"></script>

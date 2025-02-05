@@ -14,7 +14,7 @@ setInterval(animateGradient, 10);
 window.addEventListener("scroll", function () {
     let container = document.querySelector("nav");
     let scrollY = window.scrollY;
-    let maxScroll = 100;
+    let maxScroll = 40;
 
     let opacity = Math.max(0, 1 - scrollY / maxScroll);
     container.style.opacity = opacity;
