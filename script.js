@@ -11,11 +11,11 @@ function animateGradient() {
 
 setInterval(animateGradient, 10);
 
-window.addEventListener("scroll", function () {
-    let container = document.querySelector("nav");
-    let scrollY = window.scrollY;
-    let maxScroll = 40;
+// window.addEventListener("scroll", function () {
+//     let container = document.querySelector("nav");
+//     let scrollY = window.scrollY;
+//     let maxScroll = 40;
 
-    let opacity = Math.max(0, 1 - scrollY / maxScroll);
-    container.style.opacity = opacity;
-  });
+//     let opacity = Math.max(0, 1 - scrollY / maxScroll);
+//     container.style.opacity = opacity;
+//   });

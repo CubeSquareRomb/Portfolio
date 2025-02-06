@@ -23,6 +23,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     padding: 20px;
+    overflow: hidden;
 }
 
 a {
@@ -30,7 +31,7 @@ a {
   text-decoration: none;
 }
 
-nav {
+/*nav {
     background: rgba(255, 255, 255, 0.2);
     padding: 10px 20px;
     position: fixed;
@@ -43,6 +44,16 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     transform: translateX(-50%);
+}*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    background: rgba(255, 255, 255, 0.25); /* Increase visibility */
+    border-radius: 100vh;
+    height: 80px;
+    backdrop-filter: blur(10px); /* Add a blur effect for better visibility */
 }
 
 nav ul {
@@ -60,6 +71,8 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 center {
